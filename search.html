@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <script>
+        /*var a = 1;
+        var b = 2;
+        var c = a + b;
+        console.log(c);
+        var i;
+        for (i = 0; i < 10; i++) {
+            console.log(i);
+        }
+        var d = prompt("veri gir");
+        console.log("Girilen veri:", d);
+        i = "metin";
+        console.log(d + i);
+        function ChangeTitle(){
+            var titleText=document.title;
+            var ttArray=titleText.split('');
+            ttArray=ttArray.reverse();
+            document.title=ttArray.join('');
+        }
+        function InputChanged(){
+            var itext=document.getElementById("textInput");
+            var itextv=itext.value;
+
+            var iArray=itextv.split('');
+            iArray=iArray.reverse();
+            itext.value=iArray.join('');
+            ChangeTitle();
+        }
+        function Copy(){
+            var i1=document.getElementById("i1");
+            var i2=document.getElementById("i2");
+            var iArray=(i1.value).split('');
+            iArray=iArray.reverse();
+            i2.value=iArray.join('');
+        }
+        function Stop(e){
+            var submit=document.getElementById("submitButton");
+            submit.value="OK";
+
+            e.preventDefault();
+            var entryInput=document.getElementById("i2");
+            if(entryInput.value=="asd")
+            {
+                e.preventDefault();
+            }
+        }
+        function AddButton(){
+            var dugme=document.createElement("button");
+            dugme.textContent="selamınaleyk";
+            dugme.setAttribute("onclick", "AddButton()");
+            document.body.append(dugme);
+            const btn=document.querySelector("#addButton");
+            btn.removeAttribute("onclick");
+        }*/
+        function Difference(){
+            var t1=document.getElementById("t1");
+            var d1=new Date(t1.value);
+            alert(d1);
+            var t2=document.getElementById("t2");
+            var d2=new Date();
+        }
+    </script>
+</head>
+
+<body>
+    <button id="titleButton" onclick="InputChanged(), ChangeTitle()" on>Başlık Değiştir</button>
+    <button id="addButton" onclick="AddButton()">Düğme Ekle</button>
+    <form onsubmit="Stop(event)">
+        <input id="i1" type="text" oninput="Copy()"/>
+        <input id="i2" type="text" oninput="Copy()"/>
+        <input id="submitButton" type="submit" value="TAMAM"/>
+        <input type="reset" value="IPTAL"/>
+        <input type="color">
+
+        <br>
+        <label>TC</label>
+        <input type="checkbox" checked/>
+        <input id="t1" type="datetime-local" value=""/>
+        <input id="t2" type="datetime-local"/>
+    </form>
+    <span id="difference">
+
+    </span>
+    <table>
+        <thead>
+            <tr>
+                <th>Tarih</th>
+                <th>Miktar</th>
+                <th>Fiyat</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>
